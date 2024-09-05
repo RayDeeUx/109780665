@@ -54,11 +54,39 @@
 			"type": "bool",
 			"default": false
 		},
-		"canonYPosition": {
-			"name": "Canonical Y Position",
-			"description": "Move the \"notification\" 24 units upwards, to be more loyal to the Y position of the \"notification\" seen in Nullscapes.",
-			"type": "bool",
-			"default": true
+		"yPosition": {
+			"name": "Y Position",
+			"description": "Move the \"notification\" however you please, preferably to be more loyal to the Y position of the \"notification\" seen in Nullscapes.",
+			"type": "float",
+			"default": 0.0,
+			"min": 0.0,
+			"max": 500.0,
+			"control": {
+				"input": true,
+				"slider": true,
+				"arrows": true,
+				"big-arrows": true,
+				"arrow-step": 10,
+				"big-arrow-step": 50,
+				"slider-step": 0.01
+			}
+		},
+		"backgroundWidth": {
+			"name": "Background Width",
+			"description": "Adjust the width of the \"notification\" however you please, preferably to be more loyal to the Y position of the \"notification\" seen in Nullscapes.",
+			"type": "float",
+			"default": 420.0,
+			"min": 0.0,
+			"max": 500.0,
+			"control": {
+				"input": true,
+				"slider": true,
+				"arrows": true,
+				"big-arrows": true,
+				"arrow-step": 10,
+				"big-arrow-step": 50,
+				"slider-step": 0.01
+			}
 		},
 		"scale": {
 			"name": "Scale",

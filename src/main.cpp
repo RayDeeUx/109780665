@@ -53,4 +53,16 @@ $execute {
 		cocos2d::CCLabelBMFont* bodyLabelDynamic = Utils::getCBFDLBodyDynamic();
 		if (isAdaptive) return bodyLabelDynamic->setString("Click Between Frames is illegitimate and will not be allowed for use in Nullscapes.");
 	});
+	listenForSettingChanges<double>("yPosition", [](double yPos) {
+		cocos2d::CCNode* cbf = Utils::getCBFDL();
+		if (!cbf) return;
+		return cbf->setPositionY(yPos);
+	});
+	listenForSettingChanges<double>("backgroundWidth", [](double width) {
+		cocos2d::CCNode* cbf = Utils::getCBFDL();
+		if (!cbf) return;
+		cocos2d::extension::CCScale9Sprite* bg = Utils::getCBFDLBG();
+		if (!bg) return;
+		return bg->setContentWidth(width);
+	});
 }

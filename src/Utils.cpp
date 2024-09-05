@@ -43,6 +43,11 @@ namespace Utils {
 		return nullptr;
 	}
 
+	cocos2d::extension::CCScale9Sprite* getCBFDLBG(cocos2d::CCScene* scene) {
+		if (cocos2d::extension::CCScale9Sprite* bg = typeinfo_cast<CCScale9Sprite*>(getCBFDL(scene)->getChildByIDRecursive("cbf-detected-loser-bg"_spr))) return bg;
+		return nullptr;
+	}
+
 	void handleCBFDL(cocos2d::CCScene* scene) {
 		if (cocos2d::CCNode* cbf = getCBFDL()) {
 			std::string resultString = "Click Between Frames is illegitimate and will not be allowed for use ";
