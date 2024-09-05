@@ -10,12 +10,6 @@ $execute {
 		if (!cbf) return;
 		return cbf->setScale(scale);
 	});
-	listenForSettingChanges<bool>("canonYPosition", [](bool isCanonical) {
-		cocos2d::CCNode* cbf = Utils::getCBFDL();
-		if (!cbf) return;
-		if (isCanonical) return cbf->setPositionY(24.f);
-		return cbf->setPositionY(0.f);
-	});
 	listenForSettingChanges<int64_t>("titleFont", [](int64_t fontID) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
