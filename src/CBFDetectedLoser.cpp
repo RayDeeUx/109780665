@@ -57,7 +57,7 @@ bool CBFDetectedLoser::init() {
 	this->addChild(bodyLabelDynamic);
 	this->addChild(bodyLabelStatic);
 
-	if (Utils::getBool("canonYPosition")) this->setPositionY(Utils::getDouble("yPosition"));
+	this->setPositionY(Utils::getDouble("yPosition"));
 
 	this->setZOrder(109780665);
 
