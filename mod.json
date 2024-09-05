@@ -1,0 +1,131 @@
+{
+	"geode": "3.4.0",
+	"gd": {
+		"win": "2.206",
+		"android": "2.206",
+		"mac": "2.206"
+	},
+	"id": "raydeeux.109780665",
+	"name": "CBF Detected, Loser!",
+	"version": "v1.0.0",
+	"developer": "RayDeeUx",
+	"description": "CBF Detected, Loser!",
+	"repository": "https://github.com/RayDeeUx/109780665",
+	"settings": {
+		"enabled": {
+			"name": "Enabled",
+			"description": "Toggles the mod.\n\n<cy>To hide the \"notification\"</c> <cr>everywhere</c><cy>, disable this setting.</c>",
+			"type": "bool",
+			"default": true
+		},
+		"visibilityInPlayLayer": {
+			"name": "Visibility When Playing Levels",
+			"description": "Adjust the visibility of the \"notification\" when playing levels.",
+			"type": "string",
+			"default": "Only Show When Dead",
+			"one-of": [
+				"Only Show When Dead",
+				"Always Visible",
+				"Only Hide When Dead",
+				"Always Hidden"
+			]
+		},
+		"hideInLevelEditorLayer": {
+			"name": "Hide When Editing Levels",
+			"description": "Adjust the visibility of the \"notification\" when editing levels.",
+			"type": "bool",
+			"default": true
+		},
+		"toneItDown": {
+			"name": "Less Offensive Title Text",
+			"description": "Removes the \"<cr>Loser!</c>\" suffix from the title text in the \"notification\" and recolors it to <cy>yellow</c>, to reflect the yellow title text in the most current version of Nullscapes as of Thursday, September 5th, 2024.",
+			"type": "bool",
+			"default": false
+		},
+		"adaptiveText": {
+			"name": "Adaptive Body Text",
+			"description": "Changes the white text in the \"notification\" to show the name of the level you're playing, as well as other activities.",
+			"type": "bool",
+			"default": true
+		},
+		"hideEverywhereElse": {
+			"name": "Hide Outside Of Levels",
+			"description": "Hides the \"notification\" outside of levels.",
+			"type": "bool",
+			"default": false
+		},
+		"canonYPosition": {
+			"name": "Canonical Y Position",
+			"description": "Move the \"notification\" 24 units upwards, to be more loyal to the Y position of the \"notification\" seen in Nullscapes.",
+			"type": "bool",
+			"default": true
+		},
+		"scale": {
+			"name": "Scale",
+			"description": "Change the size of the \"notification\".",
+			"type": "float",
+			"default": 1.0,
+			"min": 0.01,
+			"max": 2.00,
+			"control": {
+				"input": true,
+				"slider": true,
+				"arrows": false,
+				"big-arrows": false,
+				"arrow-step": 0,
+				"big-arrow-step": 0,
+				"slider-step": 0.01
+			}
+		},
+		"titleFont": {
+			"name": "Title Font",
+			"description": "Choose the font that the title text of the \"notification\" will use.\n\n<cj>0 for Pusab (as seen in Nullscapes), -1 for Golden Pusab, and -2 for the font you see when viewing level comments.</c>\n<cy>To use font numbers greater than 0: refer to the level editor for the font each number corresponds to, subtract that number by 1, and then put it here.</c>",
+			"type": "int",
+			"default": 0,
+			"min": -2,
+			"max": 59,
+			"control": {
+				"input": true,
+				"slider": true,
+				"arrows": true,
+				"big-arrows": true,
+				"arrow-step": 1,
+				"big-arrow-step": 5,
+				"slider-step": 1
+			}
+		},
+		"bodyFont": {
+			"name": "Body Font",
+			"description": "Choose the font that the body text of the \"notification\" will use.\n\n<cj>0 for Pusab (as seen in Nullscapes), -1 for Golden Pusab, and -2 for the font you see when viewing level comments.</c>\n<cy>To use font numbers greater than 0: refer to the level editor for the font each number corresponds to, subtract that number by 1, and then put it here.</c>",
+			"type": "int",
+			"default": 0,
+			"min": -2,
+			"max": 59,
+			"control": {
+				"input": true,
+				"slider": true,
+				"arrows": true,
+				"big-arrows": true,
+				"arrow-step": 1,
+				"big-arrow-step": 5,
+				"slider-step": 1
+			}
+		}
+	},
+	"resources": {
+		"sprites": [
+			"resources/bg.png"
+		]
+	},
+	"tags": [
+		"joke"
+	],
+	"issues": {
+		"url": "https://discord.com/channels/911701438269386882/1205523212444639292",
+		"info": "Ping me <cl>(@erymanthus)</c> in the Geode SDK Discord server's <cl>#help</c> channel if you need help. <cr>DMs are NOT accepted.</c>"
+	},
+	"links": {
+		"community": "https://discord.gg/WqZBYdBWZW",
+		"homepage": "https://discord.com/channels/822510988409831486/1206371881222144020"
+	}
+}
