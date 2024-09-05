@@ -4,6 +4,8 @@ Click Between Frames is illegitimate and will not be allowed for use in Nullscap
 
 Please disable the mod in order to continue playing.
 
+<cy>Note: *Click Between Frames is*</c> <cr>*not*</c> <cy>*required to use this mod.*</c>
+
 In all seriousness, enjoy this joke mod I made as an exercise with the `CCNode` class that I've always wanted to do with Cocos2D-x.
 
 <cy>For best results, please be on the widest screen size/window size your device can allow.</c>
