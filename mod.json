@@ -77,7 +77,7 @@
 			"type": "float",
 			"default": 420.0,
 			"min": 0.0,
-			"max": 500.0,
+			"max": 2000.0,
 			"control": {
 				"input": true,
 				"slider": true,
