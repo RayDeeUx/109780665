@@ -1,6 +1,6 @@
 # 1.1.0
 - `"oh yeah uhh by the way i changed the cbf detected back to red"` <cl>- ItzKiba, Thursday, September 5th, 2024 at 10:32 PM EDT</c>
-  - `Less Offensive Title Text` has now been split to individual color and text content settings. Given that this is a joke mod and only two settings need to be adjusted, settings will simply be reset.
+  - As a result, `Less Offensive Title Text` has now been split to individual color and text content settings. Given that this is a joke mod and only two settings need to be adjusted, settings will simply be reset.
 # 1.0.2
 - `Hide Outside Of Levels` is now enabled by default for future installs.
 - Fix a grammar error from the previous changelogs.
