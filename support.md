@@ -26,7 +26,7 @@ What we're interested in is the parameter that is passed to this function. Typic
 
 Here is the relevant source code from CBF's Github page that demonstrates this behavior:
 
-```
+```cpp
 class $modify(PlayerObject) {
 	void update(float timeFactor) {
 

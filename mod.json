@@ -7,7 +7,7 @@
 	},
 	"id": "raydeeux.109780665",
 	"name": "CBF Detected, Loser!",
-	"version": "v1.0.1",
+	"version": "v1.0.2",
 	"developer": "RayDeeUx",
 	"description": "CBF Detected, Loser!",
 	"repository": "https://github.com/RayDeeUx/109780665",
@@ -52,7 +52,7 @@
 			"name": "Hide Outside Of Levels",
 			"description": "Hides the \"notification\" outside of levels.",
 			"type": "bool",
-			"default": false
+			"default": true
 		},
 		"yPosition": {
 			"name": "Y Position",
