@@ -27,18 +27,26 @@ $execute {
 		if (!bodyLabelStatic) return;
 		return bodyLabelStatic->setFntFile(CBFDetectedLoser::adjustFontFile(fontID).c_str());
 	});
-	listenForSettingChanges<bool>("toneItDown", [](bool isToneItDown) {
+	listenForSettingChanges<bool>("toneTextDown", [](bool isToneTextDown) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
 		cocos2d::CCLabelBMFont* titleLabel = Utils::getCBFDLTitle();
 		if (!titleLabel) return;
 		std::string determinedString = "CBF Detected, loser!";
-		cocos2d::ccColor3B determinedColor = ccColor3B({255, 64, 51});
-		if (isToneItDown) {
+		if (isToneTextDown) {
 			determinedString = "CBF Detected";
+		}
+		return titleLabel->setString(determinedString.c_str());
+	});
+	listenForSettingChanges<bool>("toneColorDown", [](bool isToneColorDown) {
+		cocos2d::CCNode* cbf = Utils::getCBFDL();
+		if (!cbf) return;
+		cocos2d::CCLabelBMFont* titleLabel = Utils::getCBFDLTitle();
+		if (!titleLabel) return;
+		cocos2d::ccColor3B determinedColor = ccColor3B({255, 64, 51});
+		if (isToneColorDown) {
 			determinedColor = ccColor3B({250, 237, 114});
 		}
-		titleLabel->setString(determinedString.c_str());
 		return titleLabel->setColor(determinedColor);
 	});
 	listenForSettingChanges<bool>("adaptiveText", [](bool isAdaptive) {

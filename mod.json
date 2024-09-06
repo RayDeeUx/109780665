@@ -7,7 +7,7 @@
 	},
 	"id": "raydeeux.109780665",
 	"name": "CBF Detected, Loser!",
-	"version": "v1.0.2",
+	"version": "v1.1.0",
 	"developer": "RayDeeUx",
 	"description": "CBF Detected, Loser!",
 	"repository": "https://github.com/RayDeeUx/109780665",
@@ -36,11 +36,17 @@
 			"type": "bool",
 			"default": true
 		},
-		"toneItDown": {
-			"name": "Less Offensive Title Text",
-			"description": "Removes the \"<cr>Loser!</c>\" suffix from the title text in the \"notification\" and recolors it to <cy>yellow</c>, to reflect the yellow title text in the most current version of Nullscapes as of Thursday, September 5th, 2024.",
+		"toneTextDown": {
+			"name": "Less Offensive Title Text (Contents)",
+			"description": "Enabled: \"CBF Detected\".\nDisabled: \"CBF Detected, loser!\"",
 			"type": "bool",
 			"default": true
+		},
+		"toneColorDown": {
+			"name": "Less Offensive Title Text (Color)",
+			"description": "Enabled: <cy>yellow title text</c>.\nDisabled: <cr>red title text</c>.",
+			"type": "bool",
+			"default": false
 		},
 		"adaptiveText": {
 			"name": "Adaptive Body Text",
@@ -73,7 +79,7 @@
 		},
 		"backgroundWidth": {
 			"name": "Background Width",
-			"description": "Adjust the width of the \"notification\" however you please, preferably to be more loyal to the Y position of the \"notification\" seen in Nullscapes.",
+			"description": "Adjust the width of the \"notification\" however you please, preferably to be more loyal to the width of the \"notification\" seen in Nullscapes.",
 			"type": "float",
 			"default": 420.0,
 			"min": 0.0,

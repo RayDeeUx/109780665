@@ -28,10 +28,8 @@ bool CBFDetectedLoser::init() {
 
 	std::string determinedString = "CBF Detected, loser!";
 	cocos2d::ccColor3B determinedColor = ccColor3B({255, 64, 51});
-	if (Utils::getBool("toneItDown")) {
-		determinedString = "CBF Detected";
-		determinedColor = ccColor3B({250, 237, 114});
-	}
+	if (Utils::getBool("toneTextDown")) determinedString = "CBF Detected";
+	if (Utils::getBool("toneColorDown")) determinedColor = ccColor3B({250, 237, 114});
 
 	auto titleLabel = CCLabelBMFont::create(determinedString.c_str(), titleFontFile.c_str());
 	titleLabel->setAnchorPoint({0.0f, 0.5f});
