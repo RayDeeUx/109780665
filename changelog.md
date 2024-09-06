@@ -1,3 +1,5 @@
+# 1.1.1
+- Fix `Background Width` and `Scale` settings not persisting between reboots.
 # 1.1.0
 - `"oh yeah uhh by the way i changed the cbf detected back to red"` <cl>- ItzKiba, Thursday, September 5th, 2024 at 10:32 PM EDT</c>
   - As a result, `Less Offensive Title Text` has now been split to individual color and text content settings. Given that this is a joke mod and only two settings need to be adjusted, settings will simply be reset.
