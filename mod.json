@@ -7,7 +7,7 @@
 	},
 	"id": "raydeeux.109780665",
 	"name": "CBF Detected, Loser!",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"developer": "RayDeeUx",
 	"description": "CBF Detected, Loser!",
 	"repository": "https://github.com/RayDeeUx/109780665",
@@ -40,7 +40,7 @@
 			"name": "Less Offensive Title Text",
 			"description": "Removes the \"<cr>Loser!</c>\" suffix from the title text in the \"notification\" and recolors it to <cy>yellow</c>, to reflect the yellow title text in the most current version of Nullscapes as of Thursday, September 5th, 2024.",
 			"type": "bool",
-			"default": false
+			"default": true
 		},
 		"adaptiveText": {
 			"name": "Adaptive Body Text",
