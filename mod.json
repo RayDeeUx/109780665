@@ -7,7 +7,7 @@
 	},
 	"id": "raydeeux.109780665",
 	"name": "CBF Detected, Loser!",
-	"version": "v1.1.0",
+	"version": "v1.1.1",
 	"developer": "RayDeeUx",
 	"description": "CBF Detected, Loser!",
 	"repository": "https://github.com/RayDeeUx/109780665",
@@ -98,7 +98,7 @@
 			"name": "Scale",
 			"description": "Change the size of the \"notification\".",
 			"type": "float",
-			"default": 1.0,
+			"default": 0.6,
 			"min": 0.01,
 			"max": 2.00,
 			"control": {
