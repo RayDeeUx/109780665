@@ -18,7 +18,7 @@ bool CBFDetectedLoser::init() {
 	this->setID("cbf-detected-loser"_spr);
 
 	auto bg = CCScale9Sprite::create("bg.png"_spr);
-	bg->setContentSize({Utils::getDouble("backgroundWidth"), 50.0f});
+	bg->setContentSize({static_cast<float>(Utils::getDouble("backgroundWidth")), 50.0f});
 	bg->setAnchorPoint({0.0f, 0.0f});
 	bg->setOpacity(255 * 0.56f);
 	bg->setID("cbf-detected-loser-bg"_spr);
@@ -55,8 +55,8 @@ bool CBFDetectedLoser::init() {
 	this->addChild(bodyLabelDynamic);
 	this->addChild(bodyLabelStatic);
 
-	this->setPositionY(Utils::getDouble("yPosition"));
-	this->setScale(Utils::getDouble("scale"));
+	this->setPositionY(static_cast<float>(Utils::getDouble("yPosition")));
+	this->setScale(static_cast<float>(Utils::getDouble("scale")));
 
 	return true;
 }
