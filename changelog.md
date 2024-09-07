@@ -1,6 +1,6 @@
 # `CBF Detected, Loser!` Changelog
 ## v1.1.2
-- Set Z order to 300 because why not. (It used to be at Z order 109780665 because comedy, then 0 because a Z order that high caused mod conflicts.)
+- Set Z order to 10 and made it a setting because why not. (It used to be at Z order 109780665 because comedy, then I got too lazy to resolve mod conflicts, so now it's a setting.)
 ## v1.1.1
 - Fix `Background Width` and `Scale` settings not applying properly between reboots.
 ## v1.1.0
