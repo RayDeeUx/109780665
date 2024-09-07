@@ -59,6 +59,10 @@ bool CBFDetectedLoser::init() {
 	this->setScale(static_cast<float>(Utils::getDouble("scale")));
 	this->setZOrder(Utils::getInt("zOrder"));
 
+	auto menu = CCMenu::create();
+	menu->setID("cbf-detected-loser-ccmenu-for-compat"_spr);
+	menu->addChild(this);
+
 	return true;
 }
 
