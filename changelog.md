@@ -1,17 +1,17 @@
 # `CBF Detected, Loser!` Changelog
-## 1.1.2
+## v1.1.2
 - Set Z order to 300 because why not. (It used to be at Z order 109780665 because comedy, then 0 because a Z order that high caused mod conflicts.)
-## 1.1.1
+## v1.1.1
 - Fix `Background Width` and `Scale` settings not applying properly between reboots.
-## 1.1.0
+## v1.1.0
 - `"oh yeah uhh by the way i changed the cbf detected back to red"` <cl>- ItzKiba, Thursday, September 5th, 2024 at 10:32 PM EDT</c>
   - As a result, `Less Offensive Title Text` has now been split to individual color and text content settings. Given that this is a joke mod and only two settings need to be adjusted, settings will simply be reset.
-## 1.0.2
+## v1.0.2
 - `Hide Outside Of Levels` is now enabled by default for future installs.
 - Fix a grammar error from the previous changelogs.
-## 1.0.1
+## v1.0.1
 - Rephrase a few things in `about.md`.
 - `support.md` now contains Kiba's journey with the original CBF blocker, and why he added one to Nullscapes at all. This is specifically in case Pastebin.com admins do something silly and delete the original pastebin. <cy>(Some minor adjustments have been made to the pastebin, either for readability or to ensure this mod still follows Geode's anti-profanity guidelines.) [Yes, this was done with Kiba's permission.]</c>
 - `Less Offensive Title Text` is now enabled by default for future installs. This is to better reflect the current CBF blocker in Nullscapes.
-## 1.0.0
+## v1.0.0
 - Initial release (on GitHub).
