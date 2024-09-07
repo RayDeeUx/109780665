@@ -60,6 +60,23 @@
 			"type": "bool",
 			"default": true
 		},
+		"zOrder": {
+			"name": "Z Order",
+			"description": "Choose the Z order of the \"notification\". This is so you can better adjust things to avoid mod incompatibilities.",
+			"type": "int",
+			"default": 10,
+			"min": -2,
+			"max": 300,
+			"control": {
+				"input": true,
+				"slider": true,
+				"arrows": true,
+				"big-arrows": true,
+				"arrow-step": 1,
+				"big-arrow-step": 10,
+				"slider-step": 1
+			}
+		},
 		"yPosition": {
 			"name": "Y Position",
 			"description": "Move the \"notification\" however you please, preferably to be more loyal to the Y position of the \"notification\" seen in Nullscapes.",
@@ -82,7 +99,7 @@
 			"description": "Adjust the width of the \"notification\" however you please, preferably to be more loyal to the width of the \"notification\" seen in Nullscapes.",
 			"type": "float",
 			"default": 420.0,
-			"min": 0.0,
+			"min": -200.0,
 			"max": 2000.0,
 			"control": {
 				"input": true,
