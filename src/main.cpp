@@ -10,6 +10,11 @@ $execute {
 		if (!cbf) return;
 		return cbf->setScale(scale);
 	});
+	listenForSettingChanges<int64_t>("zOrder", [](int64_t zOrder) {
+		cocos2d::CCNode* cbf = Utils::getCBFDL();
+		if (!cbf) return;
+		return cbf->setZOrder(zOrder);
+	});
 	listenForSettingChanges<int64_t>("titleFont", [](int64_t fontID) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
