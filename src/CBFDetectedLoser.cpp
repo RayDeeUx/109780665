@@ -57,7 +57,7 @@ bool CBFDetectedLoser::init() {
 
 	this->setPositionY(static_cast<float>(Utils::getDouble("yPosition")));
 	this->setScale(static_cast<float>(Utils::getDouble("scale")));
-	this->setZOrder(300);
+	this->setZOrder(Utils::getInt("zOrder"));
 
 	return true;
 }
