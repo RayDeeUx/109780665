@@ -19,11 +19,10 @@ class $modify(MyMenuLayer, MenuLayer) {
 
 		m_fields->manager->calledAlready = true;
 
-		if (auto notif = CBFDetectedLoser::create()) {
-			CCScene::get()->addChild(notif);
-			SceneManager::get()->keepAcrossScenes(notif);
-			if (!Utils::modEnabled()) notif->setVisible(false);
-		}
+		if (!Utils::modEnabled()) return true;
+		if (Utils::getCBFDL()) return true;
+
+		Utils::addCBFDL();
 
 		return true;
 	}

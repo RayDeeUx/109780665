@@ -10,6 +10,11 @@ $execute {
 		if (!cbf) return;
 		return cbf->setScale(scale);
 	});
+	listenForSettingChanges<bool>("enabled", [](bool isEnabled) {
+		cocos2d::CCNode* cbf = Utils::getCBFDL();
+		if (!isEnabled && cbf) return Utils::removeCBFDL();
+		if (isEnabled && !cbf) return Utils::addCBFDL();
+	});
 	listenForSettingChanges<int64_t>("zOrder", [](int64_t zOrder) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
