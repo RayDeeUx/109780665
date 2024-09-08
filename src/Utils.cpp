@@ -1,5 +1,4 @@
 #include "Utils.hpp"
-
 #include "CBFDetectedLoser.hpp"
 
 namespace Utils {
@@ -57,14 +56,12 @@ namespace Utils {
 		cocos2d::CCNode* cbf = getCBFDL();
 		if (cbf && getBool("hideEverywhereElse") && !pl && !lel) return removeCBFDL();
 		if (cbf && getBool("hideInLevelEditorLayer") && lel) return removeCBFDL();
-		log::info("cbf node should be added at this point");
 		if (!cbf) {
-			log::info("cbf node is being added");
 			addCBFDL();
 			cbf = getCBFDL();
 		}
 		const auto bodyLabelDynamic = getCBFDLBodyDynamic();
-		if (!bodyLabelDynamic) return log::info("dynamic body label not found");
+		if (!bodyLabelDynamic) return;
 		std::string resultString = "Click Between Frames is illegitimate and will not be allowed for use ";
 		if (gjbgl) {
 			if (!gjbgl->m_level) {
@@ -119,8 +116,7 @@ namespace Utils {
 	void removeCBFDL() {
 		auto cbf = getCBFDL();
 		if (!cbf) return;
-		cbf->removeFromParentAndCleanup(false);
-		// SceneManager::get()->forget(cbf);
-		log::info("CBFDL node removed and forgotten");
+		CCScene::get()->removeChildByID("cbf-detected-loser"_spr);
+		log::info("CBFDL node removed");
 	}
 }

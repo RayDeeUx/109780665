@@ -1,5 +1,4 @@
 #include <Geode/modify/MenuLayer.hpp>
-#include "CBFDetectedLoser.hpp"
 #include "Manager.hpp"
 #include "Utils.hpp"
 
