@@ -54,7 +54,7 @@ namespace Utils {
 		const auto lel = typeinfo_cast<LevelEditorLayer*>(gjbgl);
 		const auto pl = typeinfo_cast<PlayLayer*>(gjbgl);
 		cocos2d::CCNode* cbf = getCBFDL();
-		if (cbf && getBool("hideEverywhereElse") && !pl && !lel) return removeCBFDL();
+		if (cbf && getBool("hideEverywhereElse") && !pl && !lel) cbf->setVisible(false);
 		if (cbf && getBool("hideInLevelEditorLayer") && lel) return removeCBFDL();
 		if (!cbf) {
 			addCBFDL();
