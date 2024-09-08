@@ -1,4 +1,6 @@
 # `CBF Detected, Loser!` Changelog
+## v1.2.1
+- Fix flickering behavior when `Hide Outside Of Levels` is enabled.
 ## v1.2.0
 - Attempt to fix Z ordering issues within the level editor one more time.
   - If stuff still breaks at this point, I'm throwing in the towel.
