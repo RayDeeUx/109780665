@@ -50,13 +50,14 @@ namespace Utils {
 	}
 
 	void handleCBFDL(cocos2d::CCScene* scene) {
+		if (!Utils::modEnabled()) return removeCBFDL();
 		const auto gjbgl = getChildOfType<GJBaseGameLayer>(scene, 0);
 		const auto lel = typeinfo_cast<LevelEditorLayer*>(gjbgl);
 		const auto pl = typeinfo_cast<PlayLayer*>(gjbgl);
 		cocos2d::CCNode* cbf = getCBFDL();
 		if (cbf && getBool("hideEverywhereElse") && !pl && !lel) cbf->setVisible(false);
 		if (cbf && getBool("hideInLevelEditorLayer") && lel) return removeCBFDL();
-		if (!cbf) {
+		if (!cbf && getBool("hideInLevelEditorLayer") && !lel) {
 			addCBFDL();
 			cbf = getCBFDL();
 		}
