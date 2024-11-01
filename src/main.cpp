@@ -25,7 +25,7 @@ $execute {
 		if (!cbf) return;
 		cocos2d::extension::CCScale9Sprite* bg = Utils::getCBFDLBG();
 		if (!bg) return;
-		return bg->setContentWidth(static_cast<int>(opacity));
+		return bg->setOpacity(static_cast<int>(opacity));
 	});
 	listenForSettingChanges<int64_t>("titleFont", [](int64_t fontID) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
