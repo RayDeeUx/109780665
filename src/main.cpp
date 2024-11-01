@@ -8,7 +8,7 @@ $execute {
 	listenForSettingChanges<double>("scale", [](double scale) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
-		return cbf->setScale(scale);
+		return cbf->setScale(static_cast<float>(scale));
 	});
 	listenForSettingChanges<bool>("enabled", [](bool isEnabled) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
@@ -19,6 +19,13 @@ $execute {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
 		return cbf->setZOrder(static_cast<int>(zOrder));
+	});
+	listenForSettingChanges<int64_t>("backgroundOpacity", [](int64_t opacity) {
+		cocos2d::CCNode* cbf = Utils::getCBFDL();
+		if (!cbf) return;
+		cocos2d::extension::CCScale9Sprite* bg = Utils::getCBFDLBG();
+		if (!bg) return;
+		return bg->setContentWidth(static_cast<int>(opacity));
 	});
 	listenForSettingChanges<int64_t>("titleFont", [](int64_t fontID) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
@@ -68,13 +75,13 @@ $execute {
 	listenForSettingChanges<double>("yPosition", [](double yPos) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
-		return cbf->setPositionY(yPos);
+		return cbf->setPositionY(static_cast<float>(yPos));
 	});
-	listenForSettingChanges<double>("backgroundWidth", [](double width) {
+	listenForSettingChanges<double>("backgrougetCBFDLBGndWidth", [](double width) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
 		cocos2d::extension::CCScale9Sprite* bg = Utils::getCBFDLBG();
 		if (!bg) return;
-		return bg->setContentWidth(width);
+		return bg->setContentWidth(static_cast<float>(width));
 	});
 }
