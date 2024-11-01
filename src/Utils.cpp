@@ -25,35 +25,30 @@ namespace Utils {
 	std::string getModVersion(Mod* mod) { return mod->getVersion().toNonVString(); }
 
 	cocos2d::CCNode* getCBFDL(cocos2d::CCScene* scene) {
-		if (cocos2d::CCNode* cbf = scene->getChildByIDRecursive("cbf-detected-loser"_spr)) return cbf;
-		return nullptr;
+		return scene->getChildByID("cbf-detected-loser"_spr);
 	}
 
 	cocos2d::CCLabelBMFont* getCBFDLTitle(cocos2d::CCScene* scene) {
-		if (cocos2d::CCLabelBMFont* title = typeinfo_cast<CCLabelBMFont*>(getCBFDL(scene)->getChildByIDRecursive("cbf-detected-loser-title-label"_spr))) return title;
-		return nullptr;
+		return static_cast<CCLabelBMFont*>(getCBFDL(scene)->getChildByID("cbf-detected-loser-title-label"_spr));
 	}
 
 	cocos2d::CCLabelBMFont* getCBFDLBodyDynamic(cocos2d::CCScene* scene) {
-		if (cocos2d::CCLabelBMFont* bodyDynamic = typeinfo_cast<CCLabelBMFont*>(getCBFDL(scene)->getChildByIDRecursive("cbf-detected-loser-body-label-dynamic"_spr))) return bodyDynamic;
-		return nullptr;
+		return static_cast<CCLabelBMFont*>(getCBFDL(scene)->getChildByID("cbf-detected-loser-body-label-dynamic"_spr));
 	}
 
 	cocos2d::CCLabelBMFont* getCBFDLBodyStatic(cocos2d::CCScene* scene) {
-		if (cocos2d::CCLabelBMFont* bodyStatic = typeinfo_cast<CCLabelBMFont*>(getCBFDL(scene)->getChildByIDRecursive("cbf-detected-loser-body-label-static"_spr))) return bodyStatic;
-		return nullptr;
+		return static_cast<CCLabelBMFont*>(getCBFDL(scene)->getChildByID("cbf-detected-loser-body-label-static"_spr));
 	}
 
 	cocos2d::extension::CCScale9Sprite* getCBFDLBG(cocos2d::CCScene* scene) {
-		if (cocos2d::extension::CCScale9Sprite* bg = typeinfo_cast<CCScale9Sprite*>(getCBFDL(scene)->getChildByIDRecursive("cbf-detected-loser-bg"_spr))) return bg;
-		return nullptr;
+		return static_cast<CCScale9Sprite*>(getCBFDL(scene)->getChildByID("cbf-detected-loser-bg"_spr));
 	}
 
 	void handleCBFDL(cocos2d::CCScene* scene) {
 		if (!Utils::modEnabled()) return removeCBFDL();
-		const auto gjbgl = getChildOfType<GJBaseGameLayer>(scene, 0);
-		const auto lel = typeinfo_cast<LevelEditorLayer*>(gjbgl);
-		const auto pl = typeinfo_cast<PlayLayer*>(gjbgl);
+		const auto gjbgl = GJBaseGameLayer::get();
+		const auto lel = LevelEditorLayer::get();
+		const auto pl = PlayLayer::get();
 		cocos2d::CCNode* cbf = getCBFDL();
 		if (cbf && getBool("hideEverywhereElse") && !pl && !lel) cbf->setVisible(false);
 		if (cbf && getBool("hideInLevelEditorLayer") && lel) return removeCBFDL();

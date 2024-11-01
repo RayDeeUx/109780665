@@ -1,4 +1,6 @@
 # `CBF Detected, Loser!` Changelog
+## v1.2.2
+- Tidy a few more things up.
 ## v1.2.1
 - Fix flickering behavior when `Hide Outside Of Levels` is enabled.
 ## v1.2.0

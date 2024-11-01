@@ -2,8 +2,8 @@
 	"geode": "3.4.0",
 	"gd": {
 		"win": "2.206",
-		"android": "2.206",
-		"mac": "2.206"
+		"mac": "2.206",
+		"android": "2.206"
 	},
 	"id": "raydeeux.109780665",
 	"name": "CBF Detected, Loser!",
@@ -109,6 +109,23 @@
 				"arrow-step": 10,
 				"big-arrow-step": 50,
 				"slider-step": 0.01
+			}
+		},
+		"backgroundOpacity": {
+			"name": "Background Opacity",
+			"description": "Adjust the width of the \"notification\" however you please, preferably to be more loyal to the width of the \"notification\" seen in Nullscapes.",
+			"type": "int",
+			"default": 143,
+			"min": 0,
+			"max": 255,
+			"control": {
+				"input": true,
+				"slider": false,
+				"arrows": true,
+				"big-arrows": true,
+				"arrow-step": 1,
+				"big-arrow-step": 10,
+				"slider-step": 1
 			}
 		},
 		"scale": {
