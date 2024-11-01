@@ -7,7 +7,7 @@
 	},
 	"id": "raydeeux.109780665",
 	"name": "CBF Detected, Loser!",
-	"version": "v1.2.1",
+	"version": "v1.2.2",
 	"developer": "RayDeeUx",
 	"description": "CBF Detected, Loser!",
 	"repository": "https://github.com/RayDeeUx/109780665",
@@ -113,7 +113,7 @@
 		},
 		"backgroundOpacity": {
 			"name": "Background Opacity",
-			"description": "Adjust the width of the \"notification\" however you please, preferably to be more loyal to the width of the \"notification\" seen in Nullscapes.",
+			"description": "Adjust the opacity of the \"notification\" however you please, preferably to be more loyal to the opacity of the \"notification\" seen in Nullscapes (143 units).",
 			"type": "int",
 			"default": 143,
 			"min": 0,
