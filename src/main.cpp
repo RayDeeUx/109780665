@@ -77,7 +77,7 @@ $execute {
 		if (!cbf) return;
 		return cbf->setPositionY(static_cast<float>(yPos));
 	});
-	listenForSettingChanges<double>("backgrougetCBFDLBGndWidth", [](double width) {
+	listenForSettingChanges<double>("backgroundWidth", [](double width) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
 		cocos2d::extension::CCScale9Sprite* bg = Utils::getCBFDLBG();
