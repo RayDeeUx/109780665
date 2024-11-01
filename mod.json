@@ -161,6 +161,12 @@
 				"big-arrow-step": 5,
 				"slider-step": 1
 			}
+		},
+		"logging": {
+			"name": "Logging",
+			"description": "Only enable this if you're told to do so.",
+			"type": "bool",
+			"default": false
 		}
 	},
 	"resources": {

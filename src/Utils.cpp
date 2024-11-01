@@ -111,13 +111,13 @@ namespace Utils {
 		CCScene::get()->addChild(notif);
 		SceneManager::get()->keepAcrossScenes(notif);
 		notif->setVisible(true);
-		log::info("CBFDL node added");
+		if (Utils::getBool("logging")) log::info("CBFDL node added");
 	}
 
 	void removeCBFDL() {
 		auto cbf = getCBFDL();
 		if (!cbf) return;
 		CCScene::get()->removeChildByID("cbf-detected-loser"_spr);
-		log::info("CBFDL node removed");
+		if (Utils::getBool("logging")) log::info("CBFDL node removed");
 	}
 }

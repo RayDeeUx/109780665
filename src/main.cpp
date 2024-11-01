@@ -18,7 +18,7 @@ $execute {
 	listenForSettingChanges<int64_t>("zOrder", [](int64_t zOrder) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!cbf) return;
-		return cbf->setZOrder(zOrder);
+		return cbf->setZOrder(static_cast<int>(zOrder));
 	});
 	listenForSettingChanges<int64_t>("titleFont", [](int64_t fontID) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
