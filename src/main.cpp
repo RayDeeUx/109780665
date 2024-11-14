@@ -1,4 +1,4 @@
-#include <Geode/loader/SettingEvent.hpp>
+#include <Geode/loader/SettingV3.hpp>
 #include "CBFDetectedLoser.hpp"
 #include "Utils.hpp"
 
