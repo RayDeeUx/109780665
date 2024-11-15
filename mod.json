@@ -187,11 +187,9 @@
 		}
 	},
 	"resources": {
-		"spritesheets": {
-			"SingleSheet": [
-				"resources/bg.png"
-			]
-		}
+		"sprites": [
+			"resources/bg.png"
+		]
 	},
 	"tags": [
 		"joke"
