@@ -4,16 +4,16 @@
 
 using namespace geode::prelude;
 
-$execute {
-	listenForSettingChanges<double>("scale", [](double scale) {
-		cocos2d::CCNode* cbf = Utils::getCBFDL();
-		if (!cbf) return;
-		return cbf->setScale(static_cast<float>(scale));
-	});
+$on_mod(Loaded) {
 	listenForSettingChanges<bool>("enabled", [](bool isEnabled) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!isEnabled && cbf) return Utils::removeCBFDL();
 		if (isEnabled && !cbf) return Utils::addCBFDL();
+	});
+	listenForSettingChanges<double>("scale", [](double scale) {
+		cocos2d::CCNode* cbf = Utils::getCBFDL();
+		if (!cbf) return;
+		return cbf->setScale(static_cast<float>(scale));
 	});
 	listenForSettingChanges<int64_t>("zOrder", [](int64_t zOrder) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();

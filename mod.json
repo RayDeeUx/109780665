@@ -1,5 +1,5 @@
 {
-	"geode": "4.0.0-beta.1",
+	"geode": "4.0.1",
 	"gd": {
 		"win": "2.2074",
 		"mac": "2.2074",
@@ -7,7 +7,7 @@
 	},
 	"id": "raydeeux.109780665",
 	"name": "CBF Detected, Loser!",
-	"version": "v1.2.3",
+	"version": "v1.2.4",
 	"developer": "RayDeeUx",
 	"description": "CBF Detected, Loser!",
 	"repository": "https://github.com/RayDeeUx/109780665",

@@ -1,4 +1,6 @@
 # `CBF Detected, Loser!` Changelog
+## v1.2.4
+- Tidy one last thing up. I promise this will be the latest update in a while.
 ## v1.2.3
 - Port to 2.2074.
 ## v1.2.2
