@@ -1,4 +1,6 @@
 # `CBF Detected, Loser!` Changelog
+## v1.2.5
+- Experimental iOS support.
 ## v1.2.4
 - Tidy one last thing up. I promise this will be the latest update in a while.
 ## v1.2.3
