@@ -106,6 +106,7 @@ namespace Utils {
 		CCScene::get()->addChild(notif);
 		SceneManager::get()->keepAcrossScenes(notif);
 		notif->setVisible(true);
+		GameManager::get()->schedule(schedule_selector(CBFDetectedLoser::update));
 		if (Utils::getBool("logging")) log::info("CBFDL node added");
 	}
 
@@ -113,6 +114,7 @@ namespace Utils {
 		auto cbf = getCBFDL();
 		if (!cbf) return;
 		CCScene::get()->removeChildByID("cbf-detected-loser"_spr);
+		GameManager::get()->unschedule(schedule_selector(CBFDetectedLoser::update));
 		if (Utils::getBool("logging")) log::info("CBFDL node removed");
 	}
 }
