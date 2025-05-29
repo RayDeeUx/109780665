@@ -74,3 +74,10 @@ std::string CBFDetectedLoser::adjustFontFile(int64_t font) {
 	if (font != 0) return fmt::format("gjFont{:02d}.fnt", font);
 	return "bigFont.fnt";
 }
+
+void CBFDetectedLoser::update(float dt) {
+	cocos2d::CCNode* notif = Utils::getCBFDL();
+	if (!notif) return;
+	if (!Utils::modEnabled()) return notif->setVisible(false);
+	Utils::handleCBFDL();
+}
