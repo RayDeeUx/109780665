@@ -76,8 +76,8 @@ std::string CBFDetectedLoser::adjustFontFile(int64_t font) {
 }
 
 void CBFDetectedLoser::update(float dt) {
-	cocos2d::CCNode* notif = Utils::getCBFDL();
-	if (!notif) return;
-	if (!Utils::modEnabled()) return notif->setVisible(false);
+	cocos2d::CCNode* cbfdl = Utils::getCBFDL();
+	if (!cbfdl) return;
+	if (!Utils::modEnabled()) return cbfdl->setVisible(false);
 	Utils::handleCBFDL();
 }

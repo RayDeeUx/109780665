@@ -5,7 +5,7 @@
 using namespace geode::prelude;
 
 $on_mod(Loaded) {
-	GameManager::get()->schedule(schedule_selector(CBFDetectedLoser::update));
+	GameManager::get()->schedule(reinterpret_cast<SEL_SCHEDULE>(&CBFDetectedLoser::update));
 	listenForSettingChanges<bool>("enabled", [](bool isEnabled) {
 		cocos2d::CCNode* cbf = Utils::getCBFDL();
 		if (!isEnabled && cbf) return Utils::removeCBFDL();
