@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Utils.hpp"
+
 class CBFDetectedLoser : public cocos2d::CCNode {
 protected:
 	bool init();
