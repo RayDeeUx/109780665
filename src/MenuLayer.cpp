@@ -9,12 +9,9 @@ class $modify(MyMenuLayer, MenuLayer) {
 		Manager* manager = Manager::getSharedInstance();
 	};
 	bool init() {
-		if (!MenuLayer::init()) {
-			return false;
-		}
+		if (!MenuLayer::init()) return false;
 
-		if (m_fields->manager->calledAlready)
-			return true;
+		if (m_fields->manager->calledAlready) return true;
 
 		m_fields->manager->calledAlready = true;
 
