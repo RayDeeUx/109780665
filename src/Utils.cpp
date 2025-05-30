@@ -106,7 +106,6 @@ namespace Utils {
 		CCScene::get()->addChild(cbfdl);
 		SceneManager::get()->keepAcrossScenes(cbfdl);
 		cbfdl->setVisible(true);
-		cbfdl->scheduleUpdate();
 		if (Utils::getBool("logging")) log::info("CBFDL node added");
 	}
 

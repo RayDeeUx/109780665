@@ -65,6 +65,8 @@ bool CBFDetectedLoser::init() {
 	menu->addChild(this);
 	*/
 
+	this->scheduleUpdate();
+
 	return true;
 }
 
