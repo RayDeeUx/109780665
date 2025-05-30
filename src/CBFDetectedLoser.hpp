@@ -9,5 +9,5 @@ protected:
 public:
 	static CBFDetectedLoser* create();
 	static std::string adjustFontFile(int64_t);
-	void update(float);
+	void update(float dt);
 };
