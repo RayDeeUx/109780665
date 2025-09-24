@@ -46,7 +46,7 @@ namespace Utils {
 	}
 
 	void handleCBFDL() {
-		if (!Utils::modEnabled()) return removeCBFDL();
+		if (!Utils::modEnabled()) return Utils::removeCBFDL();
 		const auto gjbgl = GJBaseGameLayer::get();
 		const auto lel = LevelEditorLayer::get();
 		const auto pl = PlayLayer::get();
@@ -112,10 +112,10 @@ namespace Utils {
 	}
 
 	void removeCBFDL() {
-		auto cbf = getCBFDL();
+		auto cbf = Utils::getCBFDL();
 		if (!cbf) return;
-		GameManager::get()->unschedule(reinterpret_cast<SEL_SCHEDULE>(&CBFDetectedLoser::updateWrapper));
-		CCScene::get()->removeChildByID("cbf-detected-loser"_spr);
+		Manager::getSharedInstance()->cbf = nullptr;
+		cbf->removeMeAndCleanup();
 		if (Utils::getBool("logging")) log::info("CBFDL node removed");
 	}
 }
