@@ -65,7 +65,7 @@ bool CBFDetectedLoser::init() {
 	menu->addChild(this);
 	*/
 
-	this->scheduleUpdate();
+	GameManager::get()->schedule(reinterpret_cast<SEL_SCHEDULE>(&CBFDetectedLoser::updateWrapper));
 
 	return true;
 }

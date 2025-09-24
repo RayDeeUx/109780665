@@ -10,4 +10,7 @@ public:
 	static CBFDetectedLoser* create();
 	static std::string adjustFontFile(int64_t);
 	void update(float dt);
+	void updateWrapper(float dt) {
+		CBFDetectedLoser::update(dt);
+	}
 };
