@@ -65,6 +65,8 @@ bool CBFDetectedLoser::init() {
 	menu->addChild(this);
 	*/
 
+	this->scheduleUpdate();
+
 	return true;
 }
 
@@ -73,4 +75,11 @@ std::string CBFDetectedLoser::adjustFontFile(int64_t font) {
 	if (font == -2) return "chatFont.fnt";
 	if (font != 0) return fmt::format("gjFont{:02d}.fnt", font);
 	return "bigFont.fnt";
+}
+
+void CBFDetectedLoser::update(float dt) {
+	cocos2d::CCNode* cbfdl = Utils::getCBFDL();
+	if (!cbfdl) return;
+	if (!Utils::modEnabled()) return cbfdl->setVisible(false);
+	Utils::handleCBFDL();
 }

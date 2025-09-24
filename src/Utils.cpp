@@ -101,17 +101,18 @@ namespace Utils {
 	void addCBFDL() {
 		auto cbf = getCBFDL();
 		if (cbf) return cbf->setVisible(true);
-		auto notif = CBFDetectedLoser::create();
-		if (!notif) return;
-		CCScene::get()->addChild(notif);
-		SceneManager::get()->keepAcrossScenes(notif);
-		notif->setVisible(true);
+		auto cbfdl = CBFDetectedLoser::create();
+		if (!cbfdl) return;
+		CCScene::get()->addChild(cbfdl);
+		SceneManager::get()->keepAcrossScenes(cbfdl);
+		cbfdl->setVisible(true);
 		if (Utils::getBool("logging")) log::info("CBFDL node added");
 	}
 
 	void removeCBFDL() {
 		auto cbf = getCBFDL();
 		if (!cbf) return;
+		cbf->unscheduleUpdate();
 		CCScene::get()->removeChildByID("cbf-detected-loser"_spr);
 		if (Utils::getBool("logging")) log::info("CBFDL node removed");
 	}

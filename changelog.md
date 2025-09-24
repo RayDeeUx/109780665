@@ -1,4 +1,6 @@
 # `CBF Detected, Loser!` Changelog
+## v1.3.0
+- Remove a controversial function hook, and shuffled a few functions around to adapt to those changes.
 ## v1.2.5
 - Experimental iOS support.
 ## v1.2.4
