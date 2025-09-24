@@ -1,4 +1,5 @@
 #include "Utils.hpp"
+#include "Manager.hpp"
 #include "CBFDetectedLoser.hpp"
 
 namespace Utils {
@@ -106,7 +107,7 @@ namespace Utils {
 		CCScene::get()->addChild(cbfdl);
 		SceneManager::get()->keepAcrossScenes(cbfdl);
 		cbfdl->setVisible(true);
-		Manager::getSharedInstance->cbfdl = cbfdl;
+		Manager::getSharedInstance()->cbfdl = cbfdl;
 		if (Utils::getBool("logging")) log::info("CBFDL node added");
 	}
 
