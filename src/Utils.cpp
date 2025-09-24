@@ -24,27 +24,27 @@ namespace Utils {
 
 	std::string getModVersion(Mod* mod) { return mod->getVersion().toNonVString(); }
 
-	cocos2d::CCNode* getCBFDL(cocos2d::CCScene* scene) {
-		return scene->getChildByID("cbf-detected-loser"_spr);
+	cocos2d::CCNode* getCBFDL() {
+		return Manager::getSharedInstance()->cbfdl;
 	}
 
-	cocos2d::CCLabelBMFont* getCBFDLTitle(cocos2d::CCScene* scene) {
-		return static_cast<CCLabelBMFont*>(getCBFDL(scene)->getChildByID("cbf-detected-loser-title-label"_spr));
+	cocos2d::CCLabelBMFont* getCBFDLTitle() {
+		return static_cast<CCLabelBMFont*>(getCBFDL()->getChildByID("cbf-detected-loser-title-label"_spr));
 	}
 
-	cocos2d::CCLabelBMFont* getCBFDLBodyDynamic(cocos2d::CCScene* scene) {
-		return static_cast<CCLabelBMFont*>(getCBFDL(scene)->getChildByID("cbf-detected-loser-body-label-dynamic"_spr));
+	cocos2d::CCLabelBMFont* getCBFDLBodyDynamic() {
+		return static_cast<CCLabelBMFont*>(getCBFDL()->getChildByID("cbf-detected-loser-body-label-dynamic"_spr));
 	}
 
-	cocos2d::CCLabelBMFont* getCBFDLBodyStatic(cocos2d::CCScene* scene) {
-		return static_cast<CCLabelBMFont*>(getCBFDL(scene)->getChildByID("cbf-detected-loser-body-label-static"_spr));
+	cocos2d::CCLabelBMFont* getCBFDLBodyStatic() {
+		return static_cast<CCLabelBMFont*>(getCBFDL()->getChildByID("cbf-detected-loser-body-label-static"_spr));
 	}
 
-	cocos2d::extension::CCScale9Sprite* getCBFDLBG(cocos2d::CCScene* scene) {
-		return static_cast<CCScale9Sprite*>(getCBFDL(scene)->getChildByID("cbf-detected-loser-bg"_spr));
+	cocos2d::extension::CCScale9Sprite* getCBFDLBG() {
+		return static_cast<CCScale9Sprite*>(getCBFDL()->getChildByID("cbf-detected-loser-bg"_spr));
 	}
 
-	void handleCBFDL(cocos2d::CCScene* scene) {
+	void handleCBFDL() {
 		if (!Utils::modEnabled()) return removeCBFDL();
 		const auto gjbgl = GJBaseGameLayer::get();
 		const auto lel = LevelEditorLayer::get();
@@ -106,13 +106,14 @@ namespace Utils {
 		CCScene::get()->addChild(cbfdl);
 		SceneManager::get()->keepAcrossScenes(cbfdl);
 		cbfdl->setVisible(true);
+		Manager::getSharedInstance->cbfdl = cbfdl;
 		if (Utils::getBool("logging")) log::info("CBFDL node added");
 	}
 
 	void removeCBFDL() {
 		auto cbf = getCBFDL();
 		if (!cbf) return;
-		cbf->unscheduleUpdate();
+		GameManager::get()->unschedule(reinterpret_cast<SEL_SCHEDULE>(&CBFDetectedLoser::updateWrapper));
 		CCScene::get()->removeChildByID("cbf-detected-loser"_spr);
 		if (Utils::getBool("logging")) log::info("CBFDL node removed");
 	}

@@ -1,4 +1,5 @@
 #pragma once
+#include "CBFDetectedLoser.hpp"
 
 // Manager.hpp structure by acaruso
 // reused with explicit permission and strong encouragement
@@ -12,6 +13,8 @@ protected:
 public:
 
 	bool calledAlready = false;
+
+	CBFDetectedLoser* cbfdl = nullptr;
 
 	static Manager* getSharedInstance() {
 		if (!instance) {

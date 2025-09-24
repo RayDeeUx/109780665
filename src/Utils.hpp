@@ -16,12 +16,12 @@ namespace Utils {
 	Mod* getMod(std::string modID);
 	std::string getModVersion(Mod* mod);
 
-	cocos2d::CCNode* getCBFDL(cocos2d::CCScene* scene = CCDirector::get()->getRunningScene());
-	cocos2d::CCLabelBMFont* getCBFDLTitle(cocos2d::CCScene* scene = CCDirector::get()->getRunningScene());
-	cocos2d::CCLabelBMFont* getCBFDLBodyDynamic(cocos2d::CCScene* scene = CCDirector::get()->getRunningScene());
-	cocos2d::CCLabelBMFont* getCBFDLBodyStatic(cocos2d::CCScene* scene = CCDirector::get()->getRunningScene());
-	cocos2d::extension::CCScale9Sprite* getCBFDLBG(cocos2d::CCScene* scene = CCDirector::get()->getRunningScene());
-	void handleCBFDL(cocos2d::CCScene* scene = CCDirector::get()->getRunningScene());
+	cocos2d::CCNode* getCBFDL();
+	cocos2d::CCLabelBMFont* getCBFDLTitle();
+	cocos2d::CCLabelBMFont* getCBFDLBodyDynamic();
+	cocos2d::CCLabelBMFont* getCBFDLBodyStatic();
+	cocos2d::extension::CCScale9Sprite* getCBFDLBG();
+	void handleCBFDL();
 	void addCBFDL();
 	void removeCBFDL();
 }
