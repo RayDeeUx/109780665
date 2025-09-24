@@ -112,7 +112,7 @@ namespace Utils {
 	void removeCBFDL() {
 		auto cbf = getCBFDL();
 		if (!cbf) return;
-		GameManager::get()->unschedule(reinterpret_cast<SEL_SCHEDULE>(CBFDetectedLoser::updateWrapper));
+		cbf->unscheduleUpdate();
 		CCScene::get()->removeChildByID("cbf-detected-loser"_spr);
 		if (Utils::getBool("logging")) log::info("CBFDL node removed");
 	}
