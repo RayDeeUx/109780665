@@ -112,10 +112,10 @@ namespace Utils {
 	}
 
 	void removeCBFDL() {
-		auto cbf = Utils::getCBFDL();
-		if (!cbf) return;
-		Manager::getSharedInstance()->cbf = nullptr;
-		cbf->removeMeAndCleanup();
+		auto cbfdl = Utils::getCBFDL();
+		if (!cbfdl) return;
+		Manager::getSharedInstance()->cbfdl = nullptr;
+		cbfdl->removeMeAndCleanup();
 		if (Utils::getBool("logging")) log::info("CBFDL node removed");
 	}
 }
