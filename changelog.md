@@ -1,4 +1,7 @@
 # `CBF Detected, Loser!` Changelog
+## v1.3.1
+- Experimental iOS JIT-less support.
+- Refactor a few things to prepare for better mod compatibility.
 ## v1.3.0
 - Remove a controversial function hook, and shuffled a few functions around to adapt to those changes.
 ## v1.2.5
