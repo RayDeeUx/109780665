@@ -87,12 +87,12 @@ namespace Utils {
 					}
 				}
 			} else if (lel) {
-				if (getBool("hideInLevelEditorLayer")) removeCBFDL();
+				if (getBool("hideInLevelEditorLayer")) return removeCBFDL();
 				else addCBFDL();
 			}
 		} else {
 			resultString = resultString.append("in GD.");
-			if (getBool("hideEverywhereElse")) removeCBFDL();
+			if (getBool("hideEverywhereElse")) return removeCBFDL();
 			else addCBFDL();
 		}
 		if (getBool("adaptiveText")) bodyLabelDynamic->setString(resultString.c_str());
