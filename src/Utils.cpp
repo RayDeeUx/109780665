@@ -114,6 +114,7 @@ namespace Utils {
 	void removeCBFDL() {
 		auto cbfdl = Utils::getCBFDL();
 		if (!cbfdl) return;
+		SceneManager::get()->forget(cbfdl);
 		Manager::getSharedInstance()->cbfdl = nullptr;
 		cbfdl->removeMeAndCleanup();
 		if (Utils::getBool("logging")) log::info("CBFDL node removed");
