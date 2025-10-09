@@ -51,7 +51,7 @@ namespace Utils {
 		const auto lel = LevelEditorLayer::get();
 		const auto pl = PlayLayer::get();
 		cocos2d::CCNode* cbf = getCBFDL();
-		if (cbf && getBool("hideEverywhereElse") && !pl && !lel) cbf->setVisible(false);
+		if (cbf && getBool("hideEverywhereElse") && !pl && !lel) return cbf->setVisible(false);
 		if (cbf && getBool("hideInLevelEditorLayer") && lel) return Utils::removeCBFDL();
 		if (!cbf && getBool("hideInLevelEditorLayer") && !lel) {
 			addCBFDL();
@@ -87,12 +87,12 @@ namespace Utils {
 					}
 				}
 			} else if (lel) {
-				if (getBool("hideInLevelEditorLayer")) return Utils::removeCBFDL();
+				if (getBool("hideInLevelEditorLayer")) return cbfdl->setVisible(false);
 				else addCBFDL();
 			}
 		} else {
 			resultString = resultString.append("in GD.");
-			if (getBool("hideEverywhereElse")) return Utils::removeCBFDL();
+			if (getBool("hideEverywhereElse")) return cbfdl->setVisible(false);
 			else addCBFDL();
 		}
 		if (getBool("adaptiveText")) bodyLabelDynamic->setString(resultString.c_str());
